@@ -20,6 +20,7 @@ public class OptionalDemo {
         Student stu = new Student("chenminr",1,100);
         Optional<Student> stu1 = Optional.of(stu);
         System.out.println(stu1.isPresent());
+        Student student1 = stu1.get();
 
         /**
          * 使用orElse表示进行判断前面的对象是否为空，如果为空，那么使用后面的对象作为默认值

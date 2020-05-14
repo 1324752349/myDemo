@@ -6,33 +6,33 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public   class Assert {
+public class Assert {
 
-    public static class StringAssert{
+    public static class StringAssert {
 
-        public static boolean isNotEmpty(String string){
+        public static boolean isNotEmpty(String string) {
 
             return !StringUtils.isEmpty(string);
         }
 
-        public static boolean isEmpty(String string){
+        public static boolean isEmpty(String string) {
 
             return StringUtils.isEmpty(string);
         }
 
     }
 
-    public static class MapAssert{
+    public static class MapAssert {
 
-        public static boolean isEmpty(Map map){
+        public static boolean isEmpty(Map map) {
 
-            if(map==null||map.size()==0){
+            if (map == null || map.size() == 0) {
                 return true;
             }
             return false;
         }
 
-        public static boolean isNotEmpty(Map map){
+        public static boolean isNotEmpty(Map map) {
 
             return !isEmpty(map);
         }

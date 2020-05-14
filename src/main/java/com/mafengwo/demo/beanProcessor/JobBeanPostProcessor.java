@@ -42,7 +42,6 @@ public class JobBeanPostProcessor implements BeanPostProcessor {
                     throw  new RuntimeException("jobname chongfu");
                 }
                 JobProxy.put(name);
-
             }
         }
     }
