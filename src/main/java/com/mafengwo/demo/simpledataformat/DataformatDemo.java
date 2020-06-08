@@ -35,11 +35,12 @@ public class DataformatDemo {
             int finial  = i;
             executorService.execute(()->{
                     //add one day
-                System.out.println(Thread.currentThread().getName());
+                synchronized (sdf) {
                     calendar.add(Calendar.DATE, finial);
                     String format = sdf.format(calendar.getTime());
                     set.add(format);
                     countDownLatch.countDown();//--1;
+                }
             });
         }
         countDownLatch.await();
